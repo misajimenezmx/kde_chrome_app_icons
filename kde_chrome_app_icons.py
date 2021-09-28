@@ -21,15 +21,6 @@ def make_new_exec_line(desktop_file_contents, wm_class):
     return exec_line + xdo_append, desktop_file_contents.index(el)
 
 
-def make_backup_filepath(desktop_file):
-    basename = os.path.basename(desktop_file)
-    new_filepath = os.path.join(
-        desktop_dir,
-        '.' + basename + '.backup'
-    )
-    return new_filepath
-
-
 def check_if_xdotool_written(desktop_file_contents):
     return any(filter(lambda s: 'xdotool' in s, desktop_file_contents))
 
