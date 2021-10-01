@@ -4,7 +4,7 @@ import os
 from shutil import copyfile
 
 home_dir = os.getenv('HOME')  # only works on Linux
-desktop_dir = os.path.join(home_dir, 'Desktop')
+desktop_dir = os.path.join(home_dir, '.local/share/applications/')
 chrome_based_browsers = ['brave', 'chrome', 'chromium', 'vivaldi']
 
 
